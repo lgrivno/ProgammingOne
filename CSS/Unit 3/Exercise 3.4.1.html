@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Growing Circle</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/7666c7e4765f71aa338f37e94853d4cc7ed720a0/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Growing Circle</h1>
+
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+
+<script>
+window.onload = function() {
+var START_RADIUS = 100;
+var INCREMENT = 50;
+var counter = 0;
+var counter2= 0;
+var CHANGE_COLORS_AT = 20;
+var color = Randomizer.nextColor();
+
+function start(){
+	setTimer(draw, INCREMENT);
+}
+function draw(){
+	drawCircle(START_RADIUS + counter, color, getWidth() / 2, getHeight() / 2);
+
+	counter++;
+	counter2++;
+	
+	if(counter2 > 20) {
+	counter2 = 0;
+	color = Randomizer.nextColor();
+	}
+	
+	if(counter > 100){
+		stopTimer(draw);
+	}
+}
+function drawCircle(radius, color, x, y){
+	var circle = new Circle(radius);
+	circle.setColor(color);
+	circle.setPosition(x, y);
+	add(circle);
+}
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body data-rsssl=1>
+    <canvas id="myCanvas" width="578" height="200"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+	  var x = Math.floor(Math.random() * 256);
+	  var y = Math.floor(Math.random() * 256);
+	  var z = Math.floor(Math.random() * 256);
+      context.beginPath();
+      context.rect(188, 50, 100, 100);
+      context.fillStyle = "rgb("+x+","+y+","+z+")";
+      context.fill();
+      context.lineWidth = 7;
+      context.strokeStyle = "rgb("+x+","+y+","+z+")";
+      context.stroke();
+    </script>
+  </body>
+</html>      

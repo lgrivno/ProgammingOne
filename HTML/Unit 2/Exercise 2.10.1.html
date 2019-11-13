@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+<script>
+ function start(){
+	var meetRequirements = prompt("Have you met the requirements?");
+	meetRequirements = (meetRequirements == "true");
+	var hasCredits = prompt("Do you have enough credits?");
+	hasCredits = (hasCredits == "true");
+	var canGraduate = meetRequirements && hasCredits;
+	document.write("Can graduate: " + canGraduate);
+}
+start();
+</script>
+
+</body>
+
+</html>

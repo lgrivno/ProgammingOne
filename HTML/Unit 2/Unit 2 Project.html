@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Guessing Game </title>
+	</head
+	
+	<body>
+		<script>
+			var number = (Math.floor(Math.random()* 100));
+			var guess = prompt("Enter your guess:");
+			
+			while(guess != number) {
+				document.write(guess + ".");
+				if(guess > number) {
+				guess = prompt("Too High. Enter your next guess:");
+				document.write(" Too High." + "<BR>");
+				}
+				if(guess < number) {
+				guess = prompt("Too Low. Enter your next guess:");
+				document.write(" Too Low." + "<BR>");
+				}
+				if(guess == number) {
+				document.write(guess + ".");
+				document.write(" Correct!");
+				}
+			}
+		</script
+	</body>
+
+</html>
+

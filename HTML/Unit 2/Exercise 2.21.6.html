@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body data-rsssl=1>
+    <canvas id="myCanvas" width= "1000" height= "1000" canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+	  
+	  stopLight();
+	  
+	  function stopLight () {
+		drawRectangle(centerX,centerY, 150, 350, '#666666');
+		drawCircle(575,775, 45, '#00FF00');
+		drawCircle(575,575, 45, '#FF0000');
+		drawCircle(575,675, 45, '#FFFF00');
+	  }
+
+	  function drawCircle (x,y,radius,color) {
+      context.beginPath();
+      context.arc(x, y, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = color;
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = color;
+      context.stroke();
+	  }
+	  
+	  function drawRectangle (x,y,width,height,color) {
+	  context.beginPath();
+	  context.fillStyle = color;
+      context.rect(x, y, width, height);
+      context.fill();
+      context.lineWidth = 7;
+      context.strokeStyle = color;
+      context.stroke();
+	  }
+    </script>
+  </body>
+</html>      
+

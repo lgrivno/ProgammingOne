@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Drag and Drop</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/7666c7e4765f71aa338f37e94853d4cc7ed720a0/chs-js-lib/chs.js"></script>
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Drag and Drop</h1>
+
+<canvas
+width="800"
+height="800"
+class="codehs-editor-canvas"></canvas>
+
+<script>
+window.onload = function() {
+var dragging;
+var circle = new Circle(35);
+circle.setPosition(400,400);
+circle.color = "green";
+add(circle);
+	
+function down(e){
+	if(getElementAt(e.getX(),e.getY()) == circle) {
+		dragging = true;
+	} else {
+		dragging = false;
+	}
+}
+
+function drag(e){
+	if(dragging == true) {
+		circle.setPosition(e.getX(),e.getY());
+	}
+}
+
+function start(){
+	mouseDownMethod(down);
+	mouseDragMethod(drag);
+}
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>

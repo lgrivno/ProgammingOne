@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Teleporting Ball</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/7666c7e4765f71aa338f37e94853d4cc7ed720a0/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Teleporting Ball</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+
+<script>
+window.onload = function() {
+    /* This program draws a circle wherever the user
+ * clicks. */
+ 
+var circle = new Circle(20);
+circle.setPosition(Randomizer.nextInt(0,400), Randomizer.nextInt(0,400));
+circle.color = Randomizer.nextColor;
+add(circle);
+ 
+ 
+function start(){
+	mouseClickMethod(moveCircle);
+}
+function moveCircle(e){
+	circle.setPosition(Randomizer.nextInt(0,400), Randomizer.nextInt(0,400));
+	circle.color = Randomizer.nextColor();
+}
+    if (typeof start === 'function') {
+        start();
+    }
+};
+
+
+
+</script>
+
+</body>
+</html>

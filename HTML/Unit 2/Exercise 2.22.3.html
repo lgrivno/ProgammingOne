@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+while (number != -1) {
+var number = prompt("Enter Number:");
+var numero = isEvenNumber(number);
+document.write(number + " is even: " + numero + "<BR>"); 
+if ( number == -1) {
+document.write("Done!");
+}
+}
+
+function isEvenNumber (num) {
+if(num % 2 == 0 ){ 
+var even = true;
+return true;
+} else {
+var even = false;
+return false; 
+}
+}
+</script>
+</html>

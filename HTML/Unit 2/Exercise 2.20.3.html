@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<script>
+		var dice1 = (Math.ceil(Math.random() * 6));
+		var dice2 = (Math.ceil(Math.random() * 6));
+		var found = false;
+		var rolls = 0;
+		
+			while (found != true) {
+				console.log(dice1 + " and " + dice2);
+					rolls = rolls + 1;
+					dice1 = (Math.ceil(Math.random() * 6));
+					dice2 = (Math.ceil(Math.random() * 6));
+				if((dice1 == 1) && (dice2 == 1)) {
+					found = true;
+					console.log(dice1 + " and " + dice2);
+					console.log("You found snake eyes in " + rolls + " rolls.");
+			}
+			}
+			
+
+	</script
+</html>

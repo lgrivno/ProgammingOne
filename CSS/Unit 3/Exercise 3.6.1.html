@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Circle Wall</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/7666c7e4765f71aa338f37e94853d4cc7ed720a0/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Circle Wall</h1>
+
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+
+<script>
+window.onload = function() {
+var RADIUS = 25;
+var DELAY = 50;
+var counter = 0;
+var counter2 = -25;
+var counter3 = 0;
+var counter4 = 25;
+var color = 0;
+
+function start(){
+	setTimer(draw, DELAY);
+}
+function draw(){
+	counter++;
+	counter2 = counter2 + 50;
+	counter3++;
+	
+	drawSaidCircle(counter2,counter4);
+	
+	if(counter % 2 == 0) {
+		color = 'black';
+	} else {
+		color = 'red';
+	}
+	
+	if(counter3 > 8) {
+		counter3 = 0;
+		counter2 = -25;
+		counter4 = counter4 + 50;
+	}
+}
+
+function drawCircle(radius, color, x, y){
+	var circle = new Circle(radius);
+	circle.setColor(color);
+	circle.setPosition(x, y);
+	add(circle);
+}
+function drawSaidCircle (x,y) {
+	drawCircle(RADIUS,color,x,y);
+	
+}
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>

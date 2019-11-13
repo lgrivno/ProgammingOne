@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+<script>
+ function start(){
+	var isWeekday = prompt("Is today a weekday?");
+	isWeekday = (isWeekday == "true");
+	var isHoliday = prompt("Is today a holiday?");
+	isHoliday = (isHoliday == "true");
+	var noSchool = ((isWeekday && isHoliday)||(isWeekday == false)||(isWeekday && isHoliday == false));
+	document.write("There is no school today: " + noSchool);
+}
+start();
+</script>
+
+</body>
+
+</html>

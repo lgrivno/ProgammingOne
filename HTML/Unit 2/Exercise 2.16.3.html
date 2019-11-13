@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body data-rsssl=1>
+    <canvas id="myCanvas" width="1903" height="965"></canvas>
+    <script>
+	
+	var color = 'green';
+	var NUM_CIRCLES = 500;
+		for(var i = 0; i < NUM_CIRCLES; i++) {
+		drawCircle(i );
+		if ( i % 2 ) {
+			color = 'red';
+		} else {
+			color = 'green';
+		}
+		}
+	  function drawCircle (h) {
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var radius = 70;
+
+      context.beginPath();
+      context.arc(600 + h, 200 + h, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = color;
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = color;
+      context.stroke();
+	  }
+    </script>
+  </body>
+</html> 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+var correctPassword = "password";
+var currentPassword = prompt("What is the password?");
+
+while(currentPassword != correctPassword) {
+	currentPassword = prompt("What is the password?");
+	console.log("Error");
+}
+
+if(currentPassword == correctPassword) {
+document.write("You are in.");
+}
+
+
+</script>
+</html>

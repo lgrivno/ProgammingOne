@@ -1,0 +1,159 @@
+<html>
+<head>
+<title>Trail </title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/7666c7e4765f71aa338f37e94853d4cc7ed720a0/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Trail</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+
+<script>
+window.onload = function() {
+    var ball;
+	
+var MAX_BOUNCES = 10;
+var dx = 4;
+var dx = 4;
+var dy = 4;
+var dx2 = 3.9;
+var dy2 = 3.9;
+var dx3 = 3.8;
+var dy3 = 3.8;
+var bounces = 0;
+
+/* This program has a ball bounce around the screen. */
+function start(){
+	ball = new Circle(20);
+	ball.setPosition(100, 100);
+	add(ball);
+	
+	trail = new Circle(10);
+	trail.setPosition(100,100);
+	trail.color = "cyan";
+	add(trail);
+	
+	trail2 = new Circle(10);
+	trail2.setPosition(100,100);
+	trail2.color = "cyan";
+	add(trail2);
+	
+	setTimer(draw, 20);
+}
+function draw(){
+	checkWalls();
+	ball.move(dx, dy);
+	trail.move(dx2, dy2);
+	trail2.move(dx3, dy3);
+}
+function checkWalls(){
+	// Bounce off right wall
+	if(ball.getX() + ball.getRadius() > getWidth()){
+		dx = -dx;
+		bounces++;
+	}
+	
+	// Bounce off left wall
+	if(ball.getX() - ball.getRadius() < 0){
+		dx = -dx;
+		bounces++;
+	}
+	
+	// Bounce off bottom wall
+	if(ball.getY() + ball.getRadius() > getHeight()){
+		dy = -dy;
+		bounces++;
+	}
+	
+	// Bounce off top wall
+	if(ball.getY() - ball.getRadius() < 0){
+		dy = -dy;
+		bounces++;
+	}
+	
+	if(trail.getX() + trail.getRadius() > getWidth()){
+		dx2 = -dx2;
+		dx2 = dx2 - .5;
+		
+	}
+	
+
+	if(trail.getX() - trail.getRadius() < 0){
+		dx2 = -dx2;
+		dx2 = dx2 - .5;
+	}
+	
+
+	if(trail.getY() + trail.getRadius() > getHeight()){
+		dy2 = -dy2;
+		dy2 = dy2 - .5;
+	}
+
+	if(trail.getY() - trail.getRadius() < 0){
+		dy2 = -dy2;
+		dy2 = dy2 - .5;
+	}
+
+	if(trail2.getX() + trail.getRadius() > getWidth()){
+		dx3 = -dx3;
+		dx3 = dx3 - .5;
+		
+	}
+	
+
+	if(trail2.getX() - trail.getRadius() < 0){
+		dx3 = -dx3;
+		dx3 = dx3 - .5;
+	}
+	
+
+	if(trail2.getY() + trail.getRadius() > getHeight()){
+		dy3 = -dy3;
+		dy3 = dy3 - .5;
+	}
+
+	if(trail2.getY() - trail.getRadius() < 0){
+		dy3 = -dy3;
+		dy3 = dy3 - .5;
+	}
+	
+
+	
+	if(bounces > MAX_BOUNCES) {
+		stopTimer(draw);
+	}
+}
+    if (typeof start === 'function') {
+        start();
+    }
+	
+};
+</script>
+
+</body>

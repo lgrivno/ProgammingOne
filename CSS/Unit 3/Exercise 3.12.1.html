@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Leash</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/7666c7e4765f71aa338f37e94853d4cc7ed720a0/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Leash</h1>
+
+
+
+<canvas
+width="800"
+height="800"
+class="codehs-editor-canvas"></canvas>
+
+<script>
+window.onload = function() {
+ var x;
+ var y;
+ var line;
+ var ball;
+ 
+function down(e){
+	x = e.getX();
+	y = e.getY();
+	
+	line = new Line(getWidth()/2, getHeight()/2,e.getX(), e.getY());
+	add(line);
+	
+	ball = new Circle(20);
+	ball.setColor("Red");
+	ball.setPosition(x,y);
+	add(ball);
+	
+	removeAll();
+	
+	line = new Line(getWidth()/2, getHeight()/2,e.getX(), e.getY());
+	add(line);
+	
+	ball = new Circle(20);
+	ball.setColor("Red");
+	ball.setPosition(x,y);
+	add(ball);
+	
+}
+
+function start(){
+	mouseMoveMethod(down);
+}
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>

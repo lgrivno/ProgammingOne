@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var points = prompt("How many points did you get?");
+var rebounds = prompt("How many rebounds did you get?");
+var assists = prompt("How many assists did you get?");
+var allStar = 0; 
+
+if(points >= 25) {
+allStar = true; 
+} else if ((points >=10) && (rebounds >=10) && (assists >=10)) {
+allStar = true;
+} else {
+allStar = false;
+}
+document.write("You are an All Star: " + allStar);
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<style>
+	canvas {
+		border: 3px #CCC solid;
+	}
+	</style>
+
+	<body>
+		<div id="container">
+			<canvas id="myCanvas" height="800" width="800"></canvas>
+		</div>
+		<script>
+			var mainCanvas = document.querySelector("#myCanvas");
+			var mainContext = mainCanvas.getContext("2d");
+			
+			var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || 
+                            window.msRequestAnimationFrame;
+			 
+			var canvasWidth = mainCanvas.width;
+			var canvasHeight = mainCanvas.height;
+			var framesPerSecond = 60;
+			var x = 0;
+			var y = 0;
+			var r = 0;
+			var g = 0;
+			var b = 0;
+			 
+			function drawCircle() {
+				mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
+     
+				// color in the background
+				mainContext.fillStyle = "#EEEEEE";
+				mainContext.fillRect(0, 0, canvasWidth, canvasHeight);
+				 
+				// draw the circle
+				mainContext.beginPath();
+				 
+				var radius = 20;
+				mainContext.arc(x, y, radius, 0, Math.PI * 2, false);
+				mainContext.closePath();
+				 
+				// color in the circle
+				mainContext.fillStyle = "rgb("+r+","+g+","+b+")";
+				mainContext.fill();
+				
+				//requestAnimationFrame(drawCircle); //calls draw circle again
+			}
+			
+			function animate() {
+				setTimeout(function() {
+					requestAnimationFrame(animate);
+					x = (Math.floor(Math.random() * 800));
+					y = (Math.floor(Math.random() * 800));
+					r = (Math.floor(Math.random() * 256));
+					g = (Math.floor(Math.random() * 256));
+					b = (Math.floor(Math.random() * 256));
+					// animating/drawing code goes here
+					drawCircle();
+			 
+				}, 100);
+			}
+			
+			animate();
+		</script>
+	</body>
+</html>

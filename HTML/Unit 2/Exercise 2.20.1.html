@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<script>
+	var inventory = 20;
+	var amount = 0;
+
+	
+	while (inventory > 0 ) {
+	    console.log(" We have " + inventory + " items in our inventory."); 
+		amount = prompt("How many items would you like to buy?");
+		console.log("How many would you like to buy? " + amount); 
+		inventory = inventory - amount;
+		console.log("Now we have " + inventory + " left");
+	}
+	</script>
+</html>

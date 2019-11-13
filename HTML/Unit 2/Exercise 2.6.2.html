@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body data-rsssl=1>
+    <canvas id="myCanvas" width=getWidth height="2000"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var radius = 35;
+
+      context.beginPath();
+      context.arc(centerX, 100, 35, 0, 2 * Math.PI, false);
+      context.fillStyle = 'gray';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = 'gray';
+      context.stroke();
+	  
+	  context.beginPath();
+      context.arc(centerX, 185, 55, 0, 2 * Math.PI, false);
+      context.fillStyle = 'gray';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = 'gray';
+      context.stroke();
+	  
+	  var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var radius = 35;
+	  
+	  context.beginPath();
+      context.arc(centerX, 300, 76, 0, 2 * Math.PI, false);
+      context.fillStyle = 'gray';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = 'gray';
+      context.stroke();
+	  
+	  context.beginPath();
+      context.moveTo(50, 380);
+      context.lineTo(250, 380);
+      context.fillStyle = 'black';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = 'black';
+      context.stroke();
+    </script>
+  </body>
+</html>      

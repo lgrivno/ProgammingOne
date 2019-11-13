@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<canvas id="myCanvas" width="1000" height="1000"></canvas>
+<script>
+drawGhost(500,500,"green");
+drawGhost(700,700,"red");
+drawGhost(300,300,"yellow");
+function drawGhost (centerX, centerY, color) {
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      drawCircle(centerX, centerX, 46, color);
+	  
+	  context.beginPath();
+      context.rect(centerX - 44, centerY + 15, 88, 68);
+      context.fillStyle = color;
+      context.fill();
+      context.lineWidth = 7;
+      context.strokeStyle = color;
+      context.stroke();
+	  
+	 drawCircle(centerX - 27.5, centerY + 90, 18, color);
+	 
+	 drawCircle(centerX + 0.5, centerY + 90, 18, color);
+	 
+	 drawCircle(centerX + 27.5, centerY + 90, 18, color);
+	 
+	 drawCircle(centerX - 20, centerY, 10, "white");
+	 
+	 drawCircle(centerX + 20, centerY, 10, "white");
+	 
+	 drawCircle(centerX - 15, centerY, 5, "blue");
+	 
+	 drawCircle(centerX + 25, centerY, 5, "blue");
+}
+
+function drawCircle (x,y,radius,color) {
+	  var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+	  context.beginPath();
+      context.arc(x, y, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = color;
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = color;
+      context.stroke();
+}
+</script>
+</html>

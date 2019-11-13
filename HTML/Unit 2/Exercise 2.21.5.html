@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body data-rsssl=1>
+    <canvas id="myCanvas" width="1903" height="965"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+	  
+	  drawLine(50,1000);
+	  
+	  function drawLine(y,length){
+      context.beginPath();
+      context.moveTo(0, y);
+      context.lineTo(length, y);
+      context.stroke();
+	  }
+	  
+    </script>
+  </body>
+</html>      

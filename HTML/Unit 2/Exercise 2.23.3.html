@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<canvas id="myCanvas" width="1000" height="1000"></canvas>
+<script>
+//I am attempting to draw a stick man using the "intuitive" HTML canvas
+
+
+
+function drawArms() {
+	  var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+		context.beginPath();
+		context.moveTo(560, 515);
+		context.lineTo(590, 715);
+		context.lineWidth = 7.5;
+		context.strokeStyle = 'black';
+		context.stroke();
+		
+	  var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+		context.beginPath();
+		context.moveTo(450, 515);
+		context.lineTo(420, 715);
+		context.lineWidth = 7.5;
+		context.strokeStyle = 'black';
+		context.stroke();
+}
+
+	  var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+		context.beginPath();
+		context.moveTo(550, 735);
+		context.lineTo(580, 935);
+		context.lineWidth = 7.5;
+		context.strokeStyle = 'black';
+		context.stroke();
+		
+	  var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+		context.beginPath();
+		context.moveTo(460, 735);
+		context.lineTo(430, 935);
+		context.lineWidth = 7.5;
+		context.strokeStyle = 'black';
+		context.stroke();
+		
+
+
+
+
+drawArms();
+
+drawCircle(505,460,50,'PeachPuff');
+drawRectangle(456,515,100,240,'DarkRed');
+
+
+
+function drawRectangle (x,y,length,width,color) {
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+		context.beginPath();
+		context.rect(x, y, length, width);
+		context.fillStyle = color;
+		context.fill();
+		context.lineWidth = 7;
+		context.strokeStyle = color;
+		context.stroke();
+}
+
+function drawCircle (x,y,radius,color) {
+	  var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+	  context.beginPath();
+      context.arc(x, y, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = color;
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = color;
+      context.stroke();
+}
+	
+
+
+
+
+</script>
+</html>
