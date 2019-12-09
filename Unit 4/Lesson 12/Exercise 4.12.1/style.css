@@ -1,0 +1,6 @@
+img {
+    height: 200px;   
+}
+#inverted-image {
+	filter: invert(100%);
+}

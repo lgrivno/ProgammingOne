@@ -1,0 +1,62 @@
+/*
+    For each book, use the id to create a CSS rule to apply a filter
+    so that each book looks different 
+*/
+#lark {
+	filter: grayscale(100%);
+}
+#labourer {
+	filter: blur(2px);
+}
+#lionMouse {
+	filter: brightness(0.5);
+}
+#lioness {
+	filter: hue-rotate(45deg);
+}
+#littleBoy {
+	filter: hue-rotate(180deg);
+}
+#manBoyDonkey {
+	filter: hue-rotate(90deg);
+}
+/* Put your styles ABOVE this line */
+/* Styles you don't need to worry about */
+div.book{
+    position:relative;
+    background-size:100% 100%;
+    height:200px;
+    width:100px;
+    background-image:url("https://codehs.com/uploads/5628239cdcacac83db59e6457ff542bb");
+}
+
+.book:hover{
+	background-image:url("https://codehs.com/uploads/1e3e568d08c13753ff07d51815ee6192");
+}
+
+.text{
+    position: fixed;
+    text-align:left;
+    visibility:hidden; // hide the text for now
+    font-size:16px;
+}
+
+.bookcase{
+    border: 20px solid brown;
+    padding: 50px 20px;
+    width:90%;
+    text-align:center;
+    position:fixed;
+}
+
+ul{
+    list-style-type:none; // remove bullets
+}
+
+li{
+    display:inline-flex; // force list items to be in one line
+			 
+}
+body{
+    background-color: tan;
+}

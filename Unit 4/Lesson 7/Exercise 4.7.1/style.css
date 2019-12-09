@@ -1,0 +1,41 @@
+ul{
+	list-style:square;
+}
+li:hover::after{
+	background-color:PaleGoldenRod;
+	content:"  Pick me! Pick me!";
+} 
+li:active::after{
+	background-color: #46c70b;
+	content: " You have made a good decision";
+}
+#seong:hover::after {
+	content: "You will not be wrong if you vote for Seong!";
+}
+#seong:active::after{
+	content: "You voted for Seong, so you are not wrong!";
+}	    
+#maria:hover::after {
+	content: "Vote for Maria and there will be hot women in your area!";
+}
+#maria:active::after{
+	content: "There are 276 hot women in your area, as you voted for Maria!";
+}	   
+#dorji:hover::after {
+	content: "Vote for Dorji and you will won't end up gory!";
+}
+#dorji:active::after{
+	content: "You voted for Dorji, you might live.";
+}	   
+#andile:hover::after {
+	content: "Vote for Andile, or he will slap will with a crocodile!";
+}
+#andile:active::after{
+	content: "You voted for Andile, you are free from the crocodile.";
+}	   
+#shakti:hover::after {
+	content: "Vote for Shakti and you will be happy!";
+}
+#shakti:active::after{
+	content: "You voted for Shakti, so you are happy!";
+}	   

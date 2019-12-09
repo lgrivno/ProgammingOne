@@ -1,0 +1,49 @@
+h3 {
+	text-transform: uppercase;
+}
+
+p {
+	text-align: right;
+}
+
+html {
+	background-image:url("https://static.turbosquid.com/Preview/2017/02/03__07_34_25/02.png99A88447-CACB-4AA2-88B1-26B6A5C9F355Original.jpg");
+	font-family: Arial;
+	text-align: right;
+}
+ul {
+	text-align: right;
+}
+li {
+	text-align: right;
+}
+
+a {
+	font-size: 16px;
+	font-style: italic;
+}
+iframe {
+	width: 50%;
+	height: 600px;
+
+}
+.header {
+	border-style:Solid;
+}
+.content {
+	margin:15px;
+	padding:10px;
+}
+.footer {
+	margin:50px;
+	padding:10px;
+}
+.job-title {
+	font-weight:bold;
+	color:maroon;
+}
+img {
+	width:200px;
+	height:200px;
+	border-style:solid;
+}

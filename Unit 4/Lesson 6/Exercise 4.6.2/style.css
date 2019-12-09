@@ -1,0 +1,23 @@
+td.renaissance,th.renaissance{
+   background-color:DarkCyan;
+
+}
+td.impression,th.impression{
+    background-color:MediumAquaMarine ;
+}
+
+td.cubism,th.cubism{
+    background-color:DarkSalmon ;
+}
+
+td.surrealism,th.surrealism{
+    background-color:PaleGoldenRod;
+
+} 
+th {
+	font-weight:bolder;
+    font-size:22px;
+}
+td {
+	color:white;
+}

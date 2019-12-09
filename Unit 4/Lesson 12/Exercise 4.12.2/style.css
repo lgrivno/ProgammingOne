@@ -1,0 +1,6 @@
+img {
+    height: 200px;   
+}
+#blurred-image {
+	filter: blur(2px);
+}

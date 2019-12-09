@@ -1,0 +1,9 @@
+img{
+	width: 25%;
+	height: 25%;
+	animation: myanimation 2s forwards;
+}
+@keyframes myanimation {
+    from {filter: invert(0%);}
+    to {filter: invert(100%);}
+}
